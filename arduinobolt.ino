@@ -60,8 +60,8 @@ String runPwmCommand(String *data){
 
 void setup(){
   boltiot.begin(Serial);
-  // boltiot.setCommandString("RD\r",pushData);//need to add this here!
-  boltiot.setCommandString("RD\r",getAnalogData);//changed line
+  // boltiot.setCommandString("RD\r",pushData);//need to add this here for z-score analysis
+  boltiot.setCommandString("RD\r",getAnalogData);//changed line for graph generation
   boltiot.setCommandString("GetAnalogData",getAnalogData);
   boltiot.setCommandString("GetDigitalData",getDigitalData);
   boltiot.setCommandString("SetDigitalPin",setDigitalPin,2);  //2 arguments are required, argument 1 is pin number and 2 is digital value. The command and argument should be seperted by a ' ' character, ' ' is the default. example SetDigitalPin 6 0 . 
