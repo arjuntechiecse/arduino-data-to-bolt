@@ -60,6 +60,7 @@ String runPwmCommand(String *data){
 
 void setup(){
   boltiot.begin(Serial);
+  // boltiot.setCommandString("RD\r",pushData);//need to add this here!
   boltiot.setCommandString("RD\r",getAnalogData);//changed line
   boltiot.setCommandString("GetAnalogData",getAnalogData);
   boltiot.setCommandString("GetDigitalData",getDigitalData);
