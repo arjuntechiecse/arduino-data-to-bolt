@@ -24,7 +24,7 @@ String pushData(String *data){
 
 String getAnalogData(String *data){
   String retval="";
-  retval=retval+analogRead(A0)+",";
+  retval=retval+analogRead(A0)+",";//How to apply map function for calibration here?
   retval=retval+analogRead(A1)+",";
   retval=retval+analogRead(A2)+",";
   retval=retval+analogRead(A3)+",";
